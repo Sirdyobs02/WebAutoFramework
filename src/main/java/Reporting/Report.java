@@ -60,7 +60,7 @@ public class Report {
         if(!testName.equalsIgnoreCase(this.testName))
             extentTest = extentReport.createTest(testName);
     }
-
+    //****
     public void add_step(String nodeName) {
         extentNode = extentTest.createNode(nodeName);
     }
