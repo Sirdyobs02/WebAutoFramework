@@ -29,9 +29,9 @@ public class Report {
     }
 
 
-    public void start_report() {
+    public void start_report(String reportName) {
         if (extentReport == null) {
-            String html_report = System.getProperty("user.dir") + "/Reports/PersonalLoans.html";
+            String html_report = System.getProperty("user.dir") + "/Reports/"+reportName+".html";
             extentReport = new ExtentReports();
             spark = new ExtentSparkReporter(System.getProperty("user.dir") + "/Reports/test.html");
             extentReport.attachReporter(spark);
@@ -67,7 +67,7 @@ public class Report {
 
 
     public void end_test() {
-        extentTest = null;
+        //extentTest = null;
     }
 
 
